@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{ page.title }}</title>
-</head>
-<body>
-  {{ content }}
-</body>
-</html>
+{% include header.html %}
+<header>
+  <div class="title container scene-element" style="padding: 0.25em 2em;">
+    <h1>{{ page.title }}</h1>
+    <a href="{{ page.cta }}" target="_blank" class="waves-effect waves-light btn red darken-2 hide-on-med-and-down"><i class="material-icons" style="margin-left: 5px;">pageview</i>View</a>
+  </div>
+</header>
+{{ content }}
+{% include footer.html %}

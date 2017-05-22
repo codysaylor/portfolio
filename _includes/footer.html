@@ -1,0 +1,109 @@
+  </div>
+  <footer class="page-footer grey darken-4 center-align">
+    <div class="container">
+      <div class="row">
+        <div class="col s4"><h5 class="grey-text">WEB</h5></div> <div class="col s4"><h5 class="grey-text">MOTION</h5></div> <div class="col s4"><h5 class="grey-text">DESIGN</h5></div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="center-align">
+          <a href="/" class="grey-text router-link-active">Cody Saylor</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    $(document).ready(function(){
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-40605352-15', 'auto');
+      ga('require', 'cleanUrlTracker');
+      ga('require', 'eventTracker');
+      ga('require', 'impressionTracker');
+      ga('require', 'maxScrollTracker');
+      ga('require', 'mediaQueryTracker');
+      ga('require', 'outboundFormTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'pageVisibilityTracker');
+      ga('require', 'socialWidgetTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+
+      $(".button-collapse").sideNav();
+      $('ul.tabs').tabs();
+
+      $('.grid').imagesLoaded( function() {
+        $('.grid').isotope({
+          itemSelector: '.grid-item',
+        });
+        $('.materialboxed').materialbox();
+      });
+      $('.tabs').on( 'click', 'a', function(e) {
+        e.preventDefault();
+        var filter = $(this).attr('data-sort-by');
+        $('.grid').isotope({ filter: filter });
+      });
+      // var ctaWidth = "calc(50% - " + ($('.cta a').width()/2) + "px)";
+      // $('.cta a').css('left', ctaWidth);
+      'use strict';
+      var $page = $('#main'),
+          options = {
+            debug: true,
+            prefetch: true,
+            cacheLength: 2,
+            onStart: {
+              duration: 600, // Duration of our animation
+              render: function ($container) {
+                // Add your CSS animation reversing class
+                $container.addClass('is-exiting');
+                // Restart your animation
+                smoothState.restartCSSAnimations();
+                $('.button-collapse').sideNav('hide');
+              }
+            },
+            onReady: {
+              duration: 0,
+              render: function ($container, $newContent) {
+                // Remove your CSS animation reversing class
+                $container.removeClass('is-exiting');
+                // Inject the new content
+                $container.html($newContent);
+              }
+            },
+            onAfter: function($container, $newContent) {
+              window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+              ga('create', 'UA-40605352-15', 'auto');
+              ga('require', 'cleanUrlTracker');
+              ga('require', 'eventTracker');
+              ga('require', 'impressionTracker');
+              ga('require', 'maxScrollTracker');
+              ga('require', 'mediaQueryTracker');
+              ga('require', 'outboundFormTracker');
+              ga('require', 'outboundLinkTracker');
+              ga('require', 'pageVisibilityTracker');
+              ga('require', 'socialWidgetTracker');
+              ga('require', 'urlChangeTracker');
+              ga('send', 'pageview');
+              
+              $(".button-collapse").sideNav();
+              $('ul.tabs').tabs();
+              $('.grid').imagesLoaded( function() {
+                $('.grid').isotope({
+                  itemSelector: '.grid-item',
+                });
+                $('.materialboxed').materialbox();
+              });
+              $('.tabs').on( 'click', 'a', function(e) {
+                e.preventDefault();
+                var filter = $(this).attr('data-sort-by');
+                $('.grid').isotope({ filter: filter });
+              });
+              // var ctaWidth = "calc(50% - " + ($('.cta a').width()/2) + "px)";
+              // $('.cta a').css('left', ctaWidth);
+            }
+          },
+          smoothState = $page.smoothState(options).data('smoothState');
+    });
+  </script>
+</body>
+</html>
