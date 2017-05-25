@@ -38,3 +38,4 @@ sass:
 collections:
   projects:
     output: true
+    permalink: /:title/

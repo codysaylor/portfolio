@@ -68,6 +68,8 @@
                 $container.removeClass('is-exiting');
                 // Inject the new content
                 $container.html($newContent);
+                // Scroll to top of page
+                $('html, body').animate({ scrollTop: 0 }, 0);
               }
             },
             onAfter: function($container, $newContent) {
@@ -84,7 +86,7 @@
               ga('require', 'socialWidgetTracker');
               ga('require', 'urlChangeTracker');
               ga('send', 'pageview');
-              
+
               $(".button-collapse").sideNav();
               $('ul.tabs').tabs();
               $('.grid').imagesLoaded( function() {

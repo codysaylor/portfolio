@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Creative Web Solutions
-seotitle: Web development and design by Cody Saylor
+seotitle: Web Development and Design by Cody Saylor
 description: Website design/development, photo/video, and other creative web solutions. Check out the web apps, motion graphics, and photo shoots I've done in the past.
 ---
 <article style="color: #212121;">
@@ -22,7 +22,7 @@ description: Website design/development, photo/video, and other creative web sol
           <div class="clearfix"></div>
           <div class="grid">
             {% for project in site.projects %}
-              <div class="col grid-item {{ project.type }}">
+              <div class="col s12 m6 l4 grid-item {{ project.type }}">
                 <a href="{{ project.url }}" class="">
                   <div class="card hoverable">
                     <div class="card-image waves-effect waves-block waves-light">
@@ -40,7 +40,7 @@ description: Website design/development, photo/video, and other creative web sol
           <!-- <div class="col grid-item design" style="position: absolute; left: 381px; top: 0px;"><a href="/chris-chelsey" class=""><div class="card hoverable"><div class="card-image waves-effect waves-block waves-light"><img src="https://i.imgur.com/fks8ztq.jpg" class="activator"></div> <div class="card-content grey darken-4 white-text"><h3 class="truncate" style="line-height: 1.2;">Chris &amp; Chelsey</h3> <p class="truncate">Engagement Photography</p></div></div></a></div><div class="col grid-item web" style="position: absolute; left: 763px; top: 0px;"><a href="/lehigh" class=""><div class="card hoverable"><div class="card-image waves-effect waves-block waves-light"><img src="https://i.imgur.com/OWGwPy5.jpg" class="activator"></div> <div class="card-content grey darken-4 white-text"><h3 class="truncate" style="line-height: 1.2;">Lehigh Outfitters</h3> <p class="truncate">Web &amp; Email</p></div></div></a></div><div class="col grid-item web" style="position: absolute; left: 0px; top: 488px;"><a href="/untilled" class=""><div class="card hoverable"><div class="card-image waves-effect waves-block waves-light"><img src="https://i.imgur.com/0BGZDZt.jpg" class="activator"></div> <div class="card-content grey darken-4 white-text"><h3 class="truncate" style="line-height: 1.2;">Untilled</h3> <p class="truncate">Collaborative Storytelling</p></div></div></a></div><div class="col grid-item motion" style="position: absolute; left: 381px; top: 488px;"><a href="/bitcoin" class=""><div class="card hoverable"><div class="card-image waves-effect waves-block waves-light"><img src="https://i.imgur.com/cs0tIZL.jpg" class="activator"></div> <div class="card-content grey darken-4 white-text"><h3 class="truncate" style="line-height: 1.2;">More Than A Currency</h3> <p class="truncate">Motion Graphic</p></div></div></a></div><div class="col grid-item design" style="position: absolute; left: 763px; top: 488px;"><a href="/photography" class=""><div class="card hoverable"><div class="card-image waves-effect waves-block waves-light"><img src="https://i.imgur.com/cvW1hzN.jpg" class="activator"></div><div class="card-content grey darken-4 white-text"><h3 class="truncate" style="line-height: 1.2;">Design</h3> <p class="truncate">Photo &amp; Graphic</p></div></div></a></div> <div class="clearfix"></div></div> -->
           </div>
           <div class="clearfix"></div>
-          <div class="section center-align">
+          <div class="center-align">
             <h4>View More</h4>
             <a href="https://github.com/codysaylor" target="_blank" class="waves-effect waves-light btn light-blue darken-4 btn-large hoverable"><i class="material-icons right">code</i>Github</a>
             <a href="https://behance.net/saylor" target="_blank" class="waves-effect waves-light btn light-blue darken-4 btn-large hoverable"><i class="material-icons right">desktop_windows</i>Behance</a>
@@ -52,7 +52,10 @@ description: Website design/development, photo/video, and other creative web sol
         <div class="container">
           <h2>About</h2>
           <div class="row">
-            <p class="flow-text col s12 m7 l8">I'm a <b>Front End Web Developer</b> for Rocky Brands and have a degree in Visual Communication from Ohio University. I have a passion for making the web a more navigable, immersive, and an overall pleasing place because I know what great things it can offer, and the design should never be a barrier.</p>
+            <div class="col s12 m7 l8">
+              <p class="flow-text">I'm a <b>Front End Web Developer</b> for <a href="/projects/rocky/">Rocky Brands</a> and have a degree in Visual Communication from Ohio University. I have a passion for making the web a more navigable, immersive, and an overall pleasing place because I know what great things it can offer, and the design should never be a barrier.</p>
+              <p class="flow-text">Let's discuss your project.</p>
+            </div>
             <img src="https://i.imgur.com/IUKsRBd.png" alt="" class="col s12 m5 l4">
           </div>
         </div>
