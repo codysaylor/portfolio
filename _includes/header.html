@@ -7,6 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{% if page.seotitle %}{{ page.seotitle }}{% else %}{{ page.title }}{% endif %}</title>
   <meta name="description" content="{{ page.description }}">
+  <meta name="twitter:card" content="{{ page.description }}" />
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+  <meta property="og:title" content="{% if page.seotitle %}{{ page.seotitle }}{% else %}{{ page.title }}{% endif %}" />
+  <meta property="og:description" content="{{ page.description }}" />
+  <meta property="og:image" content="{{ page.thumb }}" />
   <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
   <link rel="shortcut icon" type="image/png" href="https://i.imgur.com/mfbwQgY.png">
   <link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway:300,400|Material+Icons|Roboto" rel="stylesheet">
