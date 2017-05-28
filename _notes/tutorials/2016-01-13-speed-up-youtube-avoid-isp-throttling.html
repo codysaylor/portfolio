@@ -1,0 +1,94 @@
+---
+title: 'Avoid ISP Throttling'
+seotitle: 'Speed Up Youtube &amp; Avoid Time Warner ISP Throttling'
+thumb: https://i.imgur.com/gTnFJgx.jpg
+---
+<article>
+  <section class="scene-element section">
+    <div class="container flow-text">
+      <h2>ISP throttling</h2>
+
+      <p>Time Warner Cable (TWC) and a few other internet providers can do a sneaky thing (probably stated in their terms of service somewhere) where they throttle your internet download speed when streaming (and uploading) a youtube (or similar stream based sites such as Netflix, Hulu, Twitch, etc.) video.</p>
+
+      <p>I have the basic Time Warner Cable package that includes phone, cable and internet. Using speedtest.net, I normally had anywhere from 1-10 mb/s download, and always under 1mb/s upload (when I was paying for 15mb/s). This is because Time Warner Cable was throttling the internet.</p>
+
+      <blockquote>Note: some speed test websites can show inaccurate results. Try using a couple unaffiliated speed testing sites.</blockquote>
+
+      <h2>Use Google's public DNS</h2>
+
+      <p>A quick tip for speeding up <strong>all</strong> websites, even if only a little is by changing from your current, default DNS to Google's. A DNS is essentially a phone book for the internet. When you go to a website, your computer (or router) performs a DNS lookup before it downloads it. Routers will often default to use your internet service provider's DNS. To change your router's DNS to Google's public DNS for faster and more secure DNS lookups:</p>
+
+      <p>Go to your router's home page (common one is <a href="http://192.168.1.1" target="_blank" rel="nofollow" class="num">192.168.1.1</a>) and navigate to the internet section. On this page, you should find a <em>Domain Name Server (DNS) Address</em> header. Remove any default values (or change it to <em>Use These DNS Servers</em>) and enter <code>8.8.8.8</code> <strong>and/or</strong> <code>8.8.4.4</code> (the second one is an alternative). Restart your router and you should be using Google's public DNS servers!</p>
+
+      <p>TWC may put a limit on the download, or stream, speed that you can download from sites like YouTube, Twitch, Netflix and Hulu. Each time you open a video, your computer connects to a server, one that TWC has inherently throttled. Luckily, there is an easy fix to this problem. You'll need to block the primary connection that is requested. It will then request the default, faster, server (which will speed up the download speed tremendously).</p>
+
+      <p>There is an short, easy method of adding this IP block using the command prompt and a longer, more user interface friendly version. They both do the same thing – hope you can follow one of them.</p>
+
+      <h2>Short version</h2>
+
+      <p>Start -> type <code>cmd</code></p>
+
+      <img class="responsive-img center" src="https://i.imgur.com/iSDNPAV.png" alt="Open cmd.exe from windows 7">
+
+      <p>Type the following into the command prompt:</p>
+
+      <code>netsh advfirewall firewall add rule name="TWC SUCKS" dir=in action=block remoteip = 173.194.55.0/24,206.111.0.0/16 enable=yes</code>
+
+      <p>Hit enter (You should get a confirmative "Ok.")</p>
+
+      <img class="responsive-img center" src="https://i.imgur.com/3rvH6Xt.png" alt="Hit enter to get a confirmation message">
+
+      <p>That's it. Now it should default to the faster IP when requesting certain sites.</p>
+
+      <blockquote>Note: to undo this, type the following:</blockquote>
+
+      <code>netsh advfirewall firewall delete rule name="TWC SUCKS"</code>
+
+      <h2>Long version</h2>
+
+      <p>Start -> type <code>firewall</code></p>
+
+      <img class="responsive-img center" src="https://i.imgur.com/Zo8HQFo.png" alt="Type firewall into start menu">
+
+      <p>Click InBound Rules (top left)</p>
+
+      <img class="responsive-img center" src="https://i.imgur.com/L2JDXcG.png" alt="Inbound rules">
+
+      <p>Click new rule</p>
+
+      <img class="responsive-img center" src="https://i.imgur.com/rbxj94X.png" alt="Click new rule">
+
+      <p>Check custom -> next</p>
+
+      <img class="responsive-img center" src="https://i.imgur.com/srk7Z0W.png" alt="Select custom radio button">
+
+      <p>Check all programs -> next</p>
+
+      <img class="responsive-img center" src="https://i.imgur.com/cPePvWF.png" alt="Select All programs and hit next">
+
+      <p>Leave the default settings -> Next</p>
+
+      <img class="responsive-img center" src="https://i.imgur.com/8bdpjm8.png" alt="Default settings">
+
+      <p>Under REMOTE IP addresses, check These IP addresses -> Add:</p>
+
+      <code>173.194.55.0/24 206.111.0.0/16</code>
+
+      <img class="responsive-img center" src="https://i.imgur.com/Vx6CKd1.png" alt="">
+
+      <p>Next</p>
+
+      <p>Block the connextions -> Next</p>
+
+      <img class="responsive-img center" src="https://i.imgur.com/fnPrPr4.png" alt="">
+
+      <p>Keep Domain, Private and Public all checked -> Next</p>
+
+      <img class="responsive-img center" src="https://i.imgur.com/4fMNM2i.png" alt="">
+
+      <p>Give it a proper name and description -> Finish</p>
+
+      <img class="responsive-img center" src="https://i.imgur.com/z3OqYyA.png" alt="">
+    </div>
+  </section>
+</article>

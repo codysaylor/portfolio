@@ -1,0 +1,37 @@
+---
+title: Notes & Resources
+seotitle: Web Development Notes, Resources, and More
+description: Read some web development notes, find cool resources I find useful, or just explore for ideas.
+---
+<article style="color: #212121;">
+  <section style="background: white; color: #212121;">
+    <div class="container">
+      <ul class="posts row scene-element section">
+        {% for note in site.notes %}
+          <!-- <div class="col s12 m6 l4">
+            <a href="{{ site.url }}{{ site.baseurl }}{{ note.url }}">
+              <div class="card hoverable">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img src="{{ note.thumb }}">
+                </div>
+                <div class="card-content center-align grey darken-4 white-text">
+                  <div class="card-title truncate">{{ note.title }}</div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div> -->
+        <li class="post col s12 m6 l4">
+          <a href="{{ site.url }}{{ site.baseurl }}{{ note.url }}" class="scene-element scene-element--fadeBig" style="background: url({{ note.thumb }}) center center no-repeat;">
+            <!-- <div class="post-details">
+              <span class="post-date">{{ note.date | date: '%B %d'  }}</span>
+              <span class="post-category">{{ note.categories }}</span>
+            </div> -->
+            <span class="post-title truncate">{{ note.title }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+</article>

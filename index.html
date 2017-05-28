@@ -1,14 +1,38 @@
 ---
-layout: home
 title: Creative Web Solutions
 seotitle: Web Development and Design by Cody Saylor
 description: Website design/development, photo/video, and other creative web solutions. Check out the web apps, motion graphics, and photo shoots I've done in the past.
+
+services:
+  - title: Website Design &amp; Development
+    desc: "From help installing WordPress to custom website experiences using industry standards, I've got you covered."
+    color: "blue darken-4"
+
+  - title: Video &amp; Motion Graphics
+    desc: "Express your idea, product, or service through motion to engage your audience and help tell your story."
+    color: "blue darken-3"
+
+  - title: Photography
+    desc: "Capture the perfect event, celebration, or other important moment in time or help promote your brand through stunning photography and photo editing."
+    color: "blue darken-2"
+
+  - title: Custom Email Marketing
+    desc: "Email marketing can help you reengage with your customers and grow your business. Let me help craft the perfect message."
+    color: "blue darken-1"
+
+  - title: Search Engine Marketing
+    desc: "Spread your product through organic and paid ads with Google Adwords, Bing Ads, and alternative methods."
+    color: "blue"
+
+  - title: Graphic Design
+    desc: "Standout from the crowd through original graphic design or photo editing and manipulation. I will help you create the brand you want to represent your business."
+    color: "blue lighten-1"
 ---
 <article style="color: #212121;">
   <section style="background: white; color: #212121;">
-    <div class="container">
-      <div id="work" class="divider" style="height: 0px;"></div>
-      <section class="scene-element section">
+    <div id="work" class="divider" style="background: white;"></div>
+    <section class="scene-element section">
+      <div class="container">
         <h2>Work</h2>
         <div class="row">
           <div class="col s12">
@@ -20,46 +44,60 @@ description: Website design/development, photo/video, and other creative web sol
             </ul>
           </div>
           <div class="clearfix"></div>
-          <div class="grid">
+          <div class="grid projects">
             {% for project in site.projects %}
-              <div class="col s12 m6 l4 grid-item {{ project.type }}">
-                <a href="{{ project.url }}" class="">
-                  <div class="card hoverable">
-                    <div class="card-image waves-effect waves-block waves-light">
-                      <img src="{{ project.thumb }}">
-                    </div>
-                    <div class="card-content center-align grey darken-4 white-text">
-                      <h3 class="truncate" style="line-height: 1.2;">{{ project.title }}</h3>
-                      <p class="truncate">{{ project.subtitle }}</p>
-                    </div>
+            <div class="col s12 m6 l4 grid-item {{ project.type }}">
+              <a href="{{ project.url }}" class="">
+                <div class="card hoverable">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img src="{{ project.thumb }}">
                   </div>
-                </a>
-              </div>
+                  <div class="card-content center-align grey darken-4 white-text">
+                    <h3 class="truncate" style="line-height: 1.2;">{{ project.title }}</h3>
+                    <p class="truncate">{{ project.subtitle }}</p>
+                  </div>
+                </div>
+              </a>
+            </div>
             {% endfor %}
           </div>
-          <!-- <div class="col grid-item design" style="position: absolute; left: 381px; top: 0px;"><a href="/chris-chelsey" class=""><div class="card hoverable"><div class="card-image waves-effect waves-block waves-light"><img src="https://i.imgur.com/fks8ztq.jpg" class="activator"></div> <div class="card-content grey darken-4 white-text"><h3 class="truncate" style="line-height: 1.2;">Chris &amp; Chelsey</h3> <p class="truncate">Engagement Photography</p></div></div></a></div><div class="col grid-item web" style="position: absolute; left: 763px; top: 0px;"><a href="/lehigh" class=""><div class="card hoverable"><div class="card-image waves-effect waves-block waves-light"><img src="https://i.imgur.com/OWGwPy5.jpg" class="activator"></div> <div class="card-content grey darken-4 white-text"><h3 class="truncate" style="line-height: 1.2;">Lehigh Outfitters</h3> <p class="truncate">Web &amp; Email</p></div></div></a></div><div class="col grid-item web" style="position: absolute; left: 0px; top: 488px;"><a href="/untilled" class=""><div class="card hoverable"><div class="card-image waves-effect waves-block waves-light"><img src="https://i.imgur.com/0BGZDZt.jpg" class="activator"></div> <div class="card-content grey darken-4 white-text"><h3 class="truncate" style="line-height: 1.2;">Untilled</h3> <p class="truncate">Collaborative Storytelling</p></div></div></a></div><div class="col grid-item motion" style="position: absolute; left: 381px; top: 488px;"><a href="/bitcoin" class=""><div class="card hoverable"><div class="card-image waves-effect waves-block waves-light"><img src="https://i.imgur.com/cs0tIZL.jpg" class="activator"></div> <div class="card-content grey darken-4 white-text"><h3 class="truncate" style="line-height: 1.2;">More Than A Currency</h3> <p class="truncate">Motion Graphic</p></div></div></a></div><div class="col grid-item design" style="position: absolute; left: 763px; top: 488px;"><a href="/photography" class=""><div class="card hoverable"><div class="card-image waves-effect waves-block waves-light"><img src="https://i.imgur.com/cvW1hzN.jpg" class="activator"></div><div class="card-content grey darken-4 white-text"><h3 class="truncate" style="line-height: 1.2;">Design</h3> <p class="truncate">Photo &amp; Graphic</p></div></div></a></div> <div class="clearfix"></div></div> -->
-          </div>
-          <div class="clearfix"></div>
-          <div class="center-align">
-            <h4>View More</h4>
-            <a href="https://github.com/codysaylor" target="_blank" class="waves-effect waves-light btn light-blue darken-4 btn-large hoverable"><i class="material-icons right">code</i>Github</a>
-            <a href="https://behance.net/saylor" target="_blank" class="waves-effect waves-light btn light-blue darken-4 btn-large hoverable"><i class="material-icons right">desktop_windows</i>Behance</a>
-          </div>
         </div>
-      </section>
-      <section class="section container"><div id="about" class="divider"></div></section>
-      <section class="scene-element section">
-        <div class="container">
-          <h2>About</h2>
-          <div class="row">
-            <div class="col s12 m7 l8">
-              <p class="flow-text">I'm a <b>Front End Web Developer</b> for <a href="/projects/rocky/">Rocky Brands</a> and have a degree in Visual Communication from Ohio University. I have a passion for making the web a more navigable, immersive, and an overall pleasing place because I know what great things it can offer, and the design should never be a barrier.</p>
-              <p class="flow-text">Let's discuss your project.</p>
+        <div class="clearfix"></div>
+        <div class="center-align">
+          <h4>View More</h4>
+          <a href="https://github.com/codysaylor" rel="nofollow" target="_blank" class="waves-effect waves-light btn light-blue darken-4 btn-large hoverable"><i class="material-icons right">code</i>Github</a>
+          <a href="https://behance.net/saylor" rel="nofollow" target="_blank" class="waves-effect waves-light btn light-blue darken-4 btn-large hoverable"><i class="material-icons right">desktop_windows</i>Behance</a>
+        </div>
+      </div>
+    </section>
+    <section class="section container"><div id="services" class="divider"></div></section>
+    <section class="scene-element section">
+      <div class="container">
+        <h2>Services</h2>
+        <div class="row grid">
+          {% for service in page.services %}
+          <div class="grid-item col s12 m4">
+            <div class="card-panel {{ service.color }}">
+              <div class="card-title white-text">{{ service.title }}</div>
+              <span class="white-text">{{ service.desc }}</span>
             </div>
-            <img src="https://i.imgur.com/IUKsRBd.png" alt="" class="col s12 m5 l4">
           </div>
+          {% endfor %}
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+    <section class="section container"><div id="about" class="divider"></div></section>
+    <section class="scene-element section">
+      <div class="container">
+        <h2>About</h2>
+        <div class="row">
+          <div class="col s12 m7 l8 xl9">
+            <p class="flow-text">I'm a <b>Front End Web Developer</b> for <a href="/rocky/">Rocky Brands</a> and have a degree in Visual Communication from Ohio University. I have a passion for making the web a more navigable, immersive, and an overall pleasing place because I know what great things it can offer, and the design should never be a barrier.</p>
+            <div class="center-align"><a href="https://docs.google.com/document/d/1-wrGC53w_E3RdIeoP1fhrkKWOeKU2IHPNU4ifnLuD30/export?format=pdf" target="_blank" rel="nofollow" class="waves-effect waves-light btn red darken-2"><i class="material-icons right" style="margin-left: 5px; font-size: 1.3em;">file_download</i>Resume</a></div>
+          </div>
+          <img src="https://i.imgur.com/IUKsRBd.png" alt="" class="col s12 m5 l4 xl3">
+        </div>
+      </div>
+    </section>
   </section>
 </article>

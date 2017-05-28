@@ -23,7 +23,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
-permalink: /:categories/:title/
+permalink: /notes/:categories/:title/
+# /notes/:categories/:title/
+# /notes/:collection/:path/
 
 # Build settings
 markdown: kramdown
@@ -39,3 +41,16 @@ collections:
   projects:
     output: true
     permalink: /:title/
+  notes:
+    output: true
+    permalink: /notes/:categories/:title/
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: default
