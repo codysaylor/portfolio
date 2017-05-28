@@ -236,7 +236,7 @@ footer.page-footer {
 }
 footer::before {
   // http://svgshare.com/i/1a7.svg #212121
-  background: url('http://svgshare.com/i/1eL.svg') center center no-repeat;
+  background: url('{{ site.url }}{{ site.baseurl }}/assets/curve.svg') center center no-repeat;
   background-size: 100% 100%;
   content: ' ';
   height: 1.5em;
@@ -332,7 +332,7 @@ header {
 }
 header::after {
   // http://svgshare.com/i/1a7.svg #212121
-  background: url('http://svgshare.com/i/1eL.svg') center center no-repeat;
+  background: url('{{ site.url }}{{ site.baseurl }}/assets/curve.svg') center center no-repeat;
   background-size: 100% 100%;
   content: ' ';
   height: 1.5em;
