@@ -57,6 +57,7 @@
             &&
             location.hostname == this.hostname
           ) {
+            $(".button-collapse").sideNav('hide');
             // Figure out element to scroll to
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -157,6 +158,7 @@
                     &&
                     location.hostname == this.hostname
                   ) {
+                    $(".button-collapse").sideNav('hide');
                     // Figure out element to scroll to
                     var target = $(this.hash);
                     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
