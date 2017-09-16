@@ -15,6 +15,14 @@
   </footer>
   <script>
     $(document).ready(function(){
+      // Register service worker
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('{{ site.url }}{{ site.baseurl }}/sw.js')
+          .then(function() {
+            console.log('Service worker registered');
+          });
+      }
+      // Analytics
       window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
       ga('create', 'UA-40605352-15', 'auto');
       ga('require', 'cleanUrlTracker');
