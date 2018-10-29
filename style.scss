@@ -1,14 +1,10 @@
----
-sitemap:
-  exclude: 'yes'
----
 $white: #fff;
 $dark: #212121;
 $primary: #039be5;
 $animcontinuation: forwards;
 $animdur: .6s;
 
-@import 'keyframes';
+@import '_sass/keyframes';
 
 body {
   margin: 0;
