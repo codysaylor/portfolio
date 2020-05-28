@@ -464,6 +464,9 @@ article {
   -webkit-animation: fadeDown 0.6s ease forwards;
           animation: fadeDown 0.6s ease forwards;
   opacity: 0;
+}
+
+.section:not(.home) {
   margin-top: -50px;
 }
 
