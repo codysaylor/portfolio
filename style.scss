@@ -213,6 +213,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', end
   animation: fadeDown $animdur ease $animcontinuation;
   // animation-delay: $animdur;
   opacity: 0;
+}
+.section:not(.home) {
   margin-top: -50px;
 }
 footer.page-footer {
