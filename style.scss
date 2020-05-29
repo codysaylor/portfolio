@@ -21,6 +21,12 @@ img, video {
   // box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
   max-width: 100%;
 }
+a:focus {
+  outline: 3px dashed #000;
+}
+.grid-item a {
+  display: inline-block;
+}
 .flow-text a {
   border-bottom: 1px solid $primary;
 }
