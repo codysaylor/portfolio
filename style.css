@@ -269,6 +269,14 @@ img, video {
   max-width: 100%;
 }
 
+a:focus {
+  outline: 3px dashed #000;
+}
+
+.grid-item a {
+  display: inline-block;
+}
+
 .flow-text a {
   border-bottom: 1px solid #039be5;
 }
