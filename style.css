@@ -273,6 +273,11 @@ a:focus {
   outline: 3px dashed #000;
 }
 
+.border {
+  border: 2px solid #333;
+  border-radius: 6px;
+}
+
 .grid-item a {
   display: inline-block;
 }
