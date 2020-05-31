@@ -37,7 +37,7 @@ services:
           <div class="grid projects">
             {% assign sorted = (site.projects | sort: 'rank') %}
             {% for project in sorted %}
-            <div class="col s12 m6 l4 grid-item {{ project.type }}">
+            <div class="col s12 m6 xl4 grid-item {{ project.type }}">
               <a href="{{ project.url }}" class="">
                 <div class="card hoverable">
                   <div class="card-image waves-effect waves-block waves-light">
