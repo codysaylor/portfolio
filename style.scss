@@ -245,7 +245,7 @@ footer.page-footer {
 }
 footer::before {
   // http://svgshare.com/i/1a7.svg #212121
-  background: url('{{ site.url }}{{ site.baseurl }}/assets/curve.svg') center center no-repeat;
+  background: url('/assets/curve.svg') center center no-repeat;
   background-size: 100% 100%;
   content: ' ';
   height: 1.5em;
