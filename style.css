@@ -559,7 +559,7 @@ header {
 }
 
 header::after {
-  background: url("{{ site.url }}{{ site.baseurl }}/assets/curve.svg") center center no-repeat;
+  background: url("/assets/curve.svg") center center no-repeat;
   background-size: 100% 100%;
   content: ' ';
   height: 1.5em;
